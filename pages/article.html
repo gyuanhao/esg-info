@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文章详情 - 碳息ESG情报中心</title>
+  <meta name="description" content="ESG资讯文章详情 - 碳息ESG情报中心">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo"><span class="logo-icon">🌿</span>碳息ESG</a>
+      <nav class="site-nav" id="mainNav">
+        <a href="../index.html">首页</a>
+        <div class="nav-dropdown"><a href="#">行业资讯 ▾</a><div class="dropdown-menu"><a href="finance.html">金融行业</a><a href="construction.html">建筑建材行业</a><a href="tech.html">科技行业</a><a href="agriculture.html">农业行业</a></div></div>
+        <a href="policy.html">政策库</a><a href="corporate.html">企业动态</a><a href="about.html">关于我们</a><a href="subscribe.html" class="btn-subscribe">📬 订阅周报</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <article class="article-page" id="articleContent">
+    <!-- Dynamic content rendered by JS -->
+    <div style="text-align:center;padding:80px 20px;color:var(--text-muted);">
+      <p>加载中...</p>
+    </div>
+  </article>
+
+  <!-- Subscribe CTA -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="subscribe-cta">
+        <h3>📬 订阅碳息ESG周报，不错过每周精选</h3>
+        <p>每周一封，精选四大行业ESG政策、动态与项目信息</p>
+        <form class="subscribe-form" onsubmit="event.preventDefault(); alert('订阅成功！（演示）');">
+          <input type="email" placeholder="输入你的邮箱地址" required>
+          <button type="submit">订阅</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>🌿 碳息ESG情报中心</h3>
+        <p>碳息ESG情报中心——聚合国内ESG政策、行业动态和项目信息，每周更新金融、建筑建材、科技、农业四大行业ESG资讯。让ESG从业者不再为信息搜集耗时。</p>
+      </div>
+      <div class="footer-col">
+        <h4>行业资讯</h4>
+        <a href="finance.html">金融行业</a>
+        <a href="construction.html">建筑建材行业</a>
+        <a href="tech.html">科技行业</a>
+        <a href="agriculture.html">农业行业</a>
+      </div>
+      <div class="footer-col">
+        <h4>内容栏目</h4>
+        <a href="policy.html">政策专题</a>
+        <a href="corporate.html">企业动态</a>
+        <a href="subscribe.html">订阅周报</a>
+      </div>
+      <div class="footer-col">
+        <h4>关于</h4>
+        <a href="about.html">关于我们</a>
+        <a href="about.html#sources">数据来源</a>
+        <a href="about.html#contact">联系我们</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 碳息ESG情报中心. 所有内容版权归原出处所有.</span>
+    </div>
+  </footer>
+
+  <script src="../js/articles.js"></script>
+  <script>
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    menuToggle.addEventListener('click', () => { mainNav.classList.toggle('open'); });
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => { mainNav.classList.remove('open'); });
+    });
+
+    // Parse article ID from URL
+    const params = new URLSearchParams(window.location.search);
+    const articleId = params.get('id');
+
+    if (!articleId || !ARTICLES[articleId]) {
+      document.getElementById('articleContent').innerHTML = `
+        <div class="article-header">
+          <div class="breadcrumb"><a href="../index.html">首页</a></div>
+          <h1>文章未找到</h1>
+          <p style="color:var(--text-muted);margin-top:16px;">该文章可能已被移除或链接有误。</p>
+          <a href="../index.html" style="display:inline-block;margin-top:24px;padding:10px 24px;background:var(--primary);color:white;border-radius:8px;text-decoration:none;">返回首页</a>
+        </div>`;
+      document.title = '文章未找到 - 碳息ESG情报中心';
+    } else {
+      const a = ARTICLES[articleId];
+
+      // Update page title and meta
+      document.title = a.title + ' - 碳息ESG情报中心';
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.content = a.excerpt;
+      // Remove noindex for valid articles
+      const noindex = document.querySelector('meta[name="robots"]');
+      if (noindex) noindex.remove();
+
+      // Build tags HTML
+      const tagsHtml = a.tags.map(t => `<span class="tag tag-esg">${t}</span>`).join('');
+
+      // Build body HTML (use body if available, otherwise use excerpt)
+      const bodyHtml = a.body
+        ? a.body
+        : `<p>${a.excerpt}</p>`;
+
+      // Related articles - pick 3 from same industry
+      const related = Object.entries(ARTICLES)
+        .filter(([id, art]) => id !== articleId && art.industryPage === a.industryPage)
+        .slice(0, 3);
+      const relatedHtml = related.map(([id, art]) =>
+        `<a href="article.html?id=${id}" style="display:block;padding:16px;background:var(--bg-white);border-radius:var(--radius);box-shadow:var(--shadow-sm);color:var(--text-dark);font-weight:500;">${art.title}</a>`
+      ).join('');
+
+      document.getElementById('articleContent').innerHTML = `
+        <div class="article-header">
+          <div class="breadcrumb">
+            <a href="../index.html">首页</a> / <a href="${a.industryPage}">${a.category}</a> / 正文
+          </div>
+          <h1>${a.title}</h1>
+          <div class="article-meta">
+            <span class="tag ${a.tagClass}">${a.category}</span>
+            ${tagsHtml}
+            <span>📅 ${a.date}</span>
+            <span>来源：${a.source}</span>
+          </div>
+        </div>
+        <div class="article-body">
+          ${bodyHtml}
+          <div class="article-source">
+            <strong>📌 信息来源：</strong>${a.source}<br>
+            <strong>📅 原始发布日期：</strong>${a.date}
+            <div>
+              <a href="${a.sourceUrl}" target="_blank" rel="noopener noreferrer" class="source-link-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                阅读原文 →
+              </a>
+            </div>
+          </div>
+        </div>
+        ${related.length > 0 ? `
+        <div style="margin-top:48px;padding-top:32px;border-top:2px solid var(--border);">
+          <h2 style="font-size:1.2rem;font-weight:600;color:var(--text-dark);margin-bottom:20px;">📖 相关文章</h2>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            ${relatedHtml}
+          </div>
+        </div>` : ''}
+      `;
+    }
+  </script>
+</body>
+</html>
