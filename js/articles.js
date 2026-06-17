@@ -3,7 +3,33 @@
  * 所有文章信息集中管理，article.html 根据URL参数 ?id=xxx 渲染对应文章
  */
 const ARTICLES = {
-  // ===== 首页本周精选 =====
+  // ===== 首页本周精选 (2026-06-17更新) =====
+  "fund-esg-guideline": {
+    title: "公募基金可持续投资策略应用指引正式发布",
+    category: "金融行业",
+    tagClass: "tag-finance",
+    tags: ["ESG投资", "公募基金"],
+    date: "2026-06-12",
+    source: "证监会",
+    sourceUrl: "https://xueqiu.com/3338215700/394730276",
+    excerpt: "《公开募集证券投资基金可持续投资策略应用指引（试行）》正式发布，标志着我国公募ESG投资监管从自愿倡导阶段迈入实质性规则约束阶段。",
+        body: `<p>2026年6月12日，《公开募集证券投资基金可持续投资策略应用指引（试行）》正式发布，标志着我国公募ESG投资监管从自愿倡导阶段迈入实质性规则约束阶段。</p><h2>核心内容</h2><ul><li><strong>适用范围</strong>：涵盖所有以可持续投资策略为主要投资策略的公募基金产品</li><li><strong>策略定义</strong>：明确ESG整合策略、负面筛选、正面筛选、主题投资等可持续投资策略的定义和操作规范</li><li><strong>信息披露要求</strong>：要求基金在产品合同中明确可持续投资策略，在定期报告中披露策略执行情况</li><li><strong>托管人责任</strong>：明确托管人对可持续投资策略执行的监督职责</li></ul><h2>行业影响</h2><p>该指引的发布将推动ESG投资理念在公募基金行业的普及，促进更多资金流向绿色低碳和可持续发展领域。据兴业研究测算，目前A股市场ESG主题基金规模已超5000亿元，新规实施后有望进一步扩容。</p>`,
+    industryPage: "finance.html",
+    hasFullContent: true
+  },
+  "a-esg-disclosure-49": {
+    title: "A股ESG报告披露率达49%创新高，2706家公司披露",
+    category: "金融行业",
+    tagClass: "tag-finance",
+    tags: ["ESG信披", "上市公司"],
+    date: "2026-06-12",
+    source: "绿地数字经济产业研究院",
+    sourceUrl: "https://www.warmland.cn/information/30_521.html",
+    excerpt: "截至2026年4月30日，A股全市场2706家公司发布ESG报告，披露率攀升至49.4%。银行业以100%完美披露率位居全行业榜首。",
+        body: `<p>截至2026年4月30日，A股上市公司2025财年年报披露季结束，全市场共有5492家上市公司发布年度报告，其中同步发布ESG报告的公司达到2706家，披露率攀升至49.4%。</p><h2>各行业表现</h2><ul><li><strong>银行业</strong>：以100%的完美披露率位居全行业榜首</li><li><strong>非银金融</strong>：87.80%，紧随其后</li><li><strong>钢铁行业</strong>：84.09%，高排放行业表现积极</li><li><strong>煤炭行业</strong>：78.38%</li><li><strong>食品饮料</strong>：57.48%，消费行业品牌驱动</li></ul><h2>趋势解读</h2><p>ESG披露已从单一合规要求延伸至融资能力、品牌价值与产业竞争力的重要影响因素。高耗能行业披露率提升尤其显著，反映出碳边境调节机制（CBAM）等国际规则对出口型企业的倒逼效应。</p>`,
+    industryPage: "finance.html",
+    hasFullContent: true
+  },
   "sse-esg-3year": {
     title: "上交所发布ESG信息披露三年行动方案中期评估报告",
     category: "金融行业",
@@ -117,6 +143,30 @@ industryPage: "finance.html"
   },
 
   // ===== 建筑建材行业 =====
+  "cscec-esg-rating-bplus": {
+    title: "中国建筑伦交所ESG评级维持B+，位居A股同行业第一",
+    category: "建筑建材行业",
+    tagClass: "tag-construction",
+    tags: ["ESG评级"],
+    date: "2026-06-15",
+    source: "新浪财经",
+    sourceUrl: "http://finance.sina.com.cn/stock/aiassist/esgpj/2026-06-15/doc-inicmsvc8422032.shtml",
+    excerpt: "伦交所发布最新ESG评级结果，中国建筑获得B+级维持，2024年至2026年连续三年保持B+评级，位居A股同行业18家公司第1名。",
+        body: "<p>6月15日，伦交所发布最新ESG评级结果，中国建筑获得B+级，相较于上一年评级维持。从近年表现来看，中国建筑伦交所ESG评级呈现逐年稳步向好态势，2023年获得B评级，2024年至2026年连续三年保持B+评级。</p><p>在A股同行业可比公司中，中国建筑ESG评级位居18家公司第1名。评级提升主要得益于公司在绿色建造、安全生产和社会责任等方面的持续投入和绩效改善。</p>",
+    industryPage: "construction.html"
+  },
+  "zero-carbon-factory-report": {
+    title: "《寻找零碳工厂：2026碳索行动报告》发布",
+    category: "建筑建材行业",
+    tagClass: "tag-construction",
+    tags: ["零碳", "碳中和"],
+    date: "2026-06-12",
+    source: "中国新闻周刊",
+    sourceUrl: "https://finance.sina.com.cn/esg/2026-06-15/doc-inicnisv8308896.shtml",
+    excerpt: "中国新闻周刊发布《2026碳索行动报告》，以「寻找零碳工厂」为主题，调研50家企业，精选28个典型案例，系统梳理零碳工厂发展现状与趋势。",
+        body: "<p>6月12日，中国新闻周刊在北京发布《2026碳索行动报告》，以「寻找零碳工厂」为主题。报告调研50家企业，精选28个典型案例，系统梳理政策文件，对话多位专家学者，剖析零碳工厂发展现状与趋势。</p><p>2026年是「十五五」开局之年，生态环境法典推行实施，「零碳工厂」写入「十五五」规划蓝图。报告指出，零碳工厂建设正从单点示范走向规模化推广，覆盖汽车、电子、食品饮料、建材等多个行业。</p>",
+    industryPage: "construction.html"
+  },
   "cscec-esg-2025": {
     title: `中国建筑发布2025年度ESG报告：构建"366"ESG体系`,
     category: "建筑建材行业",
@@ -191,6 +241,18 @@ industryPage: "construction.html"
   },
 
   // ===== 科技行业 =====
+  "ai-carbon-mgmt": {
+    title: "AI+能碳管理平台亮相上海碳博会，科技赋能零碳转型",
+    category: "科技行业",
+    tagClass: "tag-tech",
+    tags: ["AI", "碳中和", "碳博会"],
+    date: "2026-06-12",
+    source: "上海碳博会",
+    sourceUrl: "https://so.html5.qq.com/page/real/search_news?docid=70000021_3066a292c2c92452",
+    excerpt: "2026上海碳博会聚焦AI赋能碳中和，世通AI+能碳管理平台等科技方案亮相，实现能耗数据自动采集、碳排放智能核算、节能诊断分析等功能。",
+        body: "<p>2026年6月10日至12日，上海国际碳中和博览会盛大举办。本届展会以「零碳变革，要素赋能」为主题，展览面积达4万平方米，吸引近300家企业参展。AI赋能碳中和成为本届碳博会最突出的亮点之一。</p><p>世通AI+能碳管理平台融合AI技术，实现能耗数据自动采集、碳排放智能核算、节能诊断分析、报告自动生成等功能。平台内置核算模型和排放因子数据库，企业输入基础数据后自动完成计算，大幅降低专业门槛。</p><p>此外，联检科技携智慧能碳一体化解决方案亮相，理光中国展示行业首款碳中和A3彩色数码复合机，多家科技企业展示AI大模型和区块链技术在ESG数据监测、碳足迹追踪等领域的创新应用。</p>",
+    industryPage: "tech.html"
+  },
   "esg-reshape-ai": {
     title: "ESG重塑AI产业竞争力：中国头部企业引领可持续发展新范式",
     category: "科技行业",
@@ -303,6 +365,30 @@ industryPage: "agriculture.html"
   },
 
   // ===== 政策库 =====
+  "beautiful-china-assessment": {
+    title: "中办国办印发《美丽中国建设成效考核办法》",
+    category: "政策库",
+    tagClass: "tag-policy",
+    tags: ["生态环境", "政策"],
+    date: "2026-06-10",
+    source: "中共中央办公厅/国务院办公厅",
+    sourceUrl: "https://www.warmland.cn/information/30_521.html",
+    excerpt: "考核办法适用于各省（自治区、直辖市）党委和政府，每年开展1次，考核结果作为领导干部综合考核评价和奖惩任免的重要参考。",
+        body: `<p>近日，中共中央办公厅、国务院办公厅印发《美丽中国建设成效考核办法》，适用于对各省（自治区、直辖市）党委和政府美丽中国建设成效的考核。</p><h2>考核内容</h2><ul><li><strong>美丽中国建设责任落实情况</strong></li><li><strong>年度主要目标完成情况</strong></li><li><strong>年度重点任务完成情况</strong></li><li><strong>资金使用绩效情况</strong></li><li><strong>群众满意程度</strong></li></ul><h2>考核机制</h2><p>考核工作每年开展1次，采用百分制评分，结果划分为优秀、良好、合格、不合格4个等级。发生特别重大环境污染或生态破坏事件的，年度考核不得确定为「良好」及以上。</p><h2>结果运用</h2><p>考核结果作为省级领导班子和领导干部综合考核评价、奖惩任免的重要参考，同时作为生态环境保护相关财政资金分配的参考依据。</p>`,
+    industryPage: "policy.html",
+    hasFullContent: true
+  },
+  "human-rights-plan": {
+    title: "《国家人权行动计划（2026-2030年）》发布，强化环境权利保障",
+    category: "政策库",
+    tagClass: "tag-policy",
+    tags: ["人权", "环境权利"],
+    date: "2026-06-11",
+    source: "国务院新闻办公室",
+    sourceUrl: "https://finance.sina.com.cn/esg/2026-06-12/doc-iniccwvr0303468.shtml",
+    excerpt: "行动计划专设「强化环境权利保障」章节，将环境权利纳入国家人权保障体系，涵盖污染防治、气候变化应对和生态保护等内容。",        body: "<p>6月11日，在2026全球人权治理高端论坛开幕式上，《国家人权行动计划（2026-2030年）》正式发布。行动计划涵盖经济、社会、文化权利保障，公民权利和政治权利保障，强化环境权利保障，特定群体权益保障等多个维度。</p><p>在环境权利方面，行动计划提出加强大气、水、土壤污染防治，积极应对气候变化，推进绿色发展等具体措施。这是环境权利首次作为独立章节在国家人权行动计划中系统部署。</p>",
+    industryPage: "policy.html"
+  },
   "three-exchange-esg-guide": {
     title: "三大交易所修订可持续发展报告编制指南（征求意见稿）",
     category: "政策库",
@@ -401,6 +487,19 @@ industryPage: "policy.html"
   },
 
   // ===== 企业动态 =====
+  "carbon-expo-2026": {
+    title: "2026上海国际碳中和博览会盛大开幕，近300家企业参展",
+    category: "政策库",
+    tagClass: "tag-policy",
+    tags: ["碳中和", "碳博会"],
+    date: "2026-06-10",
+    source: "上海碳博会组委会",
+    sourceUrl: "https://so.html5.qq.com/page/real/search_news?docid=70000021_3066a292c2c92452",
+    excerpt: "为期三天的上海国际碳中和博览会6月10日开幕，以「零碳变革，要素赋能」为主题，展览面积4万平方米，吸引12个国家和地区近300家企业参展。",
+        body: `<p>6月10日，为期三天的2026上海国际碳中和技术、产品与成果博览会在上海新国际博览中心拉开帷幕。本届碳博会以「零碳变革，要素赋能」为主题，展览面积达4万平方米，吸引了来自12个国家和地区的近300家国内外知名企业和机构参展。</p><h2>三大亮点</h2><ul><li><strong>零碳园区</strong>：临港"零碳湾"规划方案亮相，目标到2028年绿电直供比例达99.34%</li><li><strong>AI赋能</strong>：世通AI+能碳管理平台、联检科技智慧能碳方案等科技应用集中展示</li><li><strong>绿色出海</strong>：中国绿色技术和标准加速"出海"，多家企业展示国际低碳认证成果</li></ul><h2>行业影响</h2><p>碳博会已成为国内绿色低碳领域规格最高、规模最大的专业展会之一，为碳达峰碳中和目标提供了重要的技术展示和产业对接平台。</p>`,
+    industryPage: "policy.html",
+    hasFullContent: true
+  },
   "boc-sustain-report": {
     title: "中国银行发布首份可持续发展报告（2025年度）",
     category: "金融行业",
