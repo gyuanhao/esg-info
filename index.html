@@ -78,67 +78,8 @@
         <h2 class="section-title">🔥 本周精选</h2>
         <a href="pages/finance.html" class="section-more">查看全部 →</a>
       </div>
-      <div class="card-grid">
-        <!-- Card 1: 公募ESG指引 -->
-        <article class="article-card">
-          <div class="card-image" style="background: linear-gradient(135deg, #E3F2FD, #BBDEFB);">
-            <span class="tag-overlay"><span class="tag tag-finance">金融</span></span>
-            🏦
-          </div>
-          <div class="card-body">
-            <span class="card-category">金融行业</span>
-            <h3 class="card-title"><a href="pages/article.html?id=fund-esg-guideline">公募基金可持续投资策略应用指引正式发布</a></h3>
-            <p class="card-excerpt">《公开募集证券投资基金可持续投资策略应用指引（试行）》正式发布，标志着我国公募ESG投资监管从自愿倡导阶段迈入实质性规则约束阶段。</p>
-            <div class="card-meta">
-              <span>2026-06-12</span>
-              <div class="card-tags">
-                <span class="tag tag-policy">ESG投资</span>
-                <span class="tag tag-esg">公募基金</span>
-              </div>
-            </div>
-            <a href="https://xueqiu.com/3338215700/394730276" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>阅读原文</a>
-          </div>
-        </article>
-        <!-- Card 2: 碳博会 -->
-        <article class="article-card">
-          <div class="card-image" style="background: linear-gradient(135deg, #E8F5E9, #C8E6C9);">
-            <span class="tag-overlay"><span class="tag tag-esg">碳中和</span></span>
-            🌍
-          </div>
-          <div class="card-body">
-            <span class="card-category">碳博会</span>
-            <h3 class="card-title"><a href="pages/article.html?id=carbon-expo-2026">2026上海国际碳中和博览会盛大开幕，近300家企业参展</a></h3>
-            <p class="card-excerpt">为期三天的上海国际碳中和博览会6月10日开幕，以「零碳变革，要素赋能」为主题，展览面积4万平方米，吸引12个国家和地区近300家企业参展。</p>
-            <div class="card-meta">
-              <span>2026-06-10</span>
-              <div class="card-tags">
-                <span class="tag tag-policy">碳中和</span>
-                <span class="tag tag-esg">碳博会</span>
-              </div>
-            </div>
-            <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_3066a292c2c92452" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>阅读原文</a>
-          </div>
-        </article>
-        <!-- Card 3: 美丽中国 -->
-        <article class="article-card">
-          <div class="card-image" style="background: linear-gradient(135deg, #FFF3E0, #FFE0B2);">
-            <span class="tag-overlay"><span class="tag tag-policy">政策</span></span>
-            📋
-          </div>
-          <div class="card-body">
-            <span class="card-category">政策库</span>
-            <h3 class="card-title"><a href="pages/article.html?id=beautiful-china-assessment">中办国办印发《美丽中国建设成效考核办法》</a></h3>
-            <p class="card-excerpt">考核办法适用于各省（区、市）党委和政府，每年开展1次，考核结果作为领导干部综合考核评价和奖惩任免的重要参考。</p>
-            <div class="card-meta">
-              <span>2026-06-10</span>
-              <div class="card-tags">
-                <span class="tag tag-policy">生态环境</span>
-                <span class="tag tag-esg">政策</span>
-              </div>
-            </div>
-            <a href="https://www.warmland.cn/information/30_521.html" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>阅读原文</a>
-          </div>
-        </article>
+      <div class="card-grid" id="featuredGrid">
+        <!-- 动态渲染：从 articles.js 取最新3篇 -->
       </div>
     </div>
   </section>
@@ -148,28 +89,28 @@
     <div class="section-inner">
       <div class="section-header">
         <h2 class="section-title">📊 行业速览</h2>
-        <span class="week-badge">🕐 2026.06.10 - 06.17</span>
+        <span class="week-badge" id="weekRange">🕐 加载中...</span>
       </div>
-      <div class="industry-grid">
-        </div>
+      <div class="industry-grid" id="industryGrid">
+        <!-- 动态渲染：从 articles.js 按分类取最新3篇 -->
       </div>
     </div>
   </section>
 
-  <!-- 最新政策 --> -->
+  <!-- 最新政策 -->
   <section class="section">
     <div class="section-inner">
       <div class="section-header">
         <h2 class="section-title">📜 最新政策</h2>
         <a href="pages/policy.html" class="section-more">查看政策库 →</a>
       </div>
-      <div class="policy-list">
-        </div>
+      <div class="policy-list" id="policyList">
+        <!-- 动态渲染：从 articles.js 取最新5篇政策 -->
       </div>
     </div>
   </section>
 
-  <!-- Subscribe --> CTA -->
+  <!-- Subscribe CTA -->
   <section class="section">
     <div class="section-inner">
       <div class="subscribe-cta">

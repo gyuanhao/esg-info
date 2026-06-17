@@ -13,8 +13,10 @@
   <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://www.esg-weekly.com/pages/policy.html">
   <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/articles.js"></script>
+  <script src="../js/subpage-render.js"></script>
 </head>
-<body>
+<body data-category="政策库">
   <header class="site-header">
     <div class="header-inner">
       <a href="../index.html" class="site-logo"><span class="logo-icon">🌿</span>碳息ESG</a>
@@ -36,93 +38,15 @@
 
   <section class="section">
     <div class="section-inner">
-      <!-- Filter -->
-      <div style="display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap;">
-        <span class="tag tag-policy" style="cursor:pointer;padding:6px 14px;font-size:0.85rem;">全部</span>
-        <span class="tag" style="cursor:pointer;padding:6px 14px;font-size:0.85rem;background:#f0f2f5;color:#666;">国家政策</span>
-        <span class="tag" style="cursor:pointer;padding:6px 14px;font-size:0.85rem;background:#f0f2f5;color:#666;">地方政策</span>
-        <span class="tag" style="cursor:pointer;padding:6px 14px;font-size:0.85rem;background:#f0f2f5;color:#666;">国际标准</span>
-        <span class="tag" style="cursor:pointer;padding:6px 14px;font-size:0.85rem;background:#f0f2f5;color:#666;">交易所规则</span>
+      <!-- Filter tabs - 动态渲染 -->
+      <div id="filterBar" style="display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap;">
       </div>
 
-      <div class="policy-list">
-        <div class="policy-item">
-          <div class="policy-date"><span class="day">09</span><span class="month">6月</span></div>
-          <div class="policy-content">
-            <h4><a href="article-detail.html">上交所ESG信息披露三年行动方案中期评估报告</a></h4>
-            <p>来源：上海证券交易所 · 国家政策 · 沪市ESG报告披露率突破45%，信披质量持续提升 <a href="https://www.sse.com.cn/aboutus/mediacenter/hotandd/c/c_20241106_10763797.shtml" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>阅读原文</a></p>
-          </div>
-        </div>
-        <div class="policy-item">
-          <div class="policy-date"><span class="day">08</span><span class="month">6月</span></div>
-          <div class="policy-content">
-            <h4><a href="article.html?id=building-decarbonization">建材产业脱碳路线图：2027年前发布4项碳减排技术指南</a></h4>
-            <p>来源：工信部 · 国家政策 · 培育30个以上特色集群，建设50项以上绿色建材应用示范工程 <a href="https://www.gov.cn/zhengce/zhengceku/2022-11/08/content_5725353.htm" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>阅读原文</a></p>
-          </div>
-        </div>
-        <div class="policy-item">
-          <div class="policy-date"><span class="day">05</span><span class="month">6月</span></div>
-          <div class="policy-content">
-            <h4><a href="article.html?id=three-exchange-esg-guide">三大交易所修订可持续发展报告编制指南（征求意见稿）</a></h4>
-            <p>来源：上交所/深交所/北交所 · 交易所规则 · 新增三份应用指南，提升ESG信披可操作性 <a href="https://www.sse.com.cn/lawandrules/guide/stock/zbxxpljg/ssgszljg/c/c_20250117_10770284.shtml" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>阅读原文</a></p>
-          </div>
-        </div>
-        <div class="policy-item">
-          <div class="policy-date"><span class="day">03</span><span class="month">6月</span></div>
-          <div class="policy-content">
-            <h4><a href="article.html?id=mee-climate-adapt">生态环境部发布2025年适应气候变化进展报告</a></h4>
-            <p>来源：生态环境部 · 国家政策 · 系统总结中国2025年适应气候变化进展与成效 <a href="https://www.gov.cn/lianbo/bumen/202510/content_7046295.htm" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>阅读原文</a></p>
-          </div>
-        </div>
-        <div class="policy-item">
-          <div class="policy-date"><span class="day">01</span><span class="month">6月</span></div>
-          <div class="policy-content">
-            <h4><a href="article.html?id=issb-implementation">ISSB发布可持续披露准则实施指南更新版</a></h4>
-            <p>来源：IFRS基金会 · 国际标准 · 为首次采用S1和S2准则的企业提供更清晰的实施指引 <a href="https://www.ifrs.org/news-and-events/updates/issb/2025/issb-update-january-2025/" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>阅读原文</a></p>
-          </div>
-        </div>
-        <div class="policy-item">
-          <div class="policy-date"><span class="day">28</span><span class="month">5月</span></div>
-          <div class="policy-content">
-            <h4><a href="article.html?id=tcfd-cfo-nature">TCFD发布面向CFO的自然指南</a></h4>
-            <p>来源：TCFD · 国际标准 · 帮助企业识别、评估和应对自然相关问题，将自然因素纳入核心财务流程 <a href="https://tnfd.global/tnfd-and-a4s-release-guide-for-cfos-on-nature-related-issues/" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>阅读原文</a></p>
-          </div>
-        </div>
-        <div class="policy-item">
-          <div class="policy-date"><span class="day">15</span><span class="month">5月</span></div>
-          <div class="policy-content">
-            <h4><a href="article.html?id=sse-lushan-esg">上交所发布《贯彻"两山"理念 沪市ESG实践二十年》报告</a></h4>
-            <p>来源：上海证券交易所 · 交易所规则 · 向境内外市场参与者系统介绍沪市二十年来ESG实践探索 <a href="https://www.sse.com.cn/aboutus/mediacenter/hotandd/c/c_20250815_10788642.shtml" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>阅读原文</a></p>
-          </div>
-        </div>
-        <div class="policy-item">
-          <div class="policy-date"><span class="day">06</span><span class="month">5月</span></div>
-          <div class="policy-content">
-            <h4><a href="article.html?id=beijing-green-finance">北京市发布绿色金融发展实施方案</a></h4>
-            <p>来源：北京市人民政府 · 地方政策 · 推动绿色信贷、绿色债券和绿色保险在北京地区的创新与应用 <a href="https://jrj.beijing.gov.cn/2024zcwj/bjszcfg2024/202409/t20240903_3788575.html" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>阅读原文</a></p>
-          </div>
-        </div>
-        <div class="policy-item">
-          <div class="policy-date"><span class="day">22</span><span class="month">4月</span></div>
-          <div class="policy-content">
-            <h4><a href="article.html?id=sasac-esg-indicator">国资委发布央企控股上市公司ESG专项报告参考指标体系</a></h4>
-            <p>来源：国务院国资委 · 国家政策 · 规范央企ESG信息披露框架，推动央企ESG治理水平提升 <a href="https://capital.huanqiu.com/article/4E1aSwoxzLc" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>阅读原文</a></p>
-          </div>
-        </div>
-        <div class="policy-item">
-          <div class="policy-date"><span class="day">10</span><span class="month">4月</span></div>
-          <div class="policy-content">
-            <h4><a href="article.html?id=tnfd-final">TNFD发布自然相关财务披露框架最终版</a></h4>
-            <p>来源：TNFD · 国际标准 · 提供企业自然相关风险与机遇的识别和披露框架 <a href="https://tnfd.global/" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>阅读原文</a></p>
-          </div>
-        </div>
+      <div class="card-grid card-grid-2" id="articleGrid">
       </div>
 
-      <div style="text-align:center;margin-top:40px;">
-        <span style="display:inline-block;padding:10px 16px;background:var(--primary);color:white;border-radius:6px;font-size:0.9rem;margin:0 4px;">1</span>
-        <span style="display:inline-block;padding:10px 16px;background:var(--bg-white);color:var(--text-muted);border-radius:6px;font-size:0.9rem;margin:0 4px;cursor:pointer;">2</span>
-        <span style="display:inline-block;padding:10px 16px;background:var(--bg-white);color:var(--text-muted);border-radius:6px;font-size:0.9rem;margin:0 4px;cursor:pointer;">3</span>
-        <span style="display:inline-block;padding:10px 16px;background:var(--bg-white);color:var(--text-muted);border-radius:6px;font-size:0.9rem;margin:0 4px;cursor:pointer;">4</span>
+      <!-- Pagination - 动态渲染 -->
+      <div id="pagination" style="text-align:center;margin-top:40px;">
       </div>
     </div>
   </section>

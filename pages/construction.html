@@ -13,8 +13,10 @@
   <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://www.esg-weekly.com/pages/construction.html">
   <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/articles.js"></script>
+  <script src="../js/subpage-render.js"></script>
 </head>
-<body>
+<body data-category="建筑建材行业">
   <header class="site-header">
     <div class="header-inner">
       <a href="../index.html" class="site-logo"><span class="logo-icon">🌿</span>碳息ESG</a>
@@ -36,80 +38,15 @@
 
   <section class="section">
     <div class="section-inner">
-      <div style="display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap;">
-        <span class="tag tag-construction" style="cursor:pointer;padding:6px 14px;font-size:0.85rem;">全部</span>
-        <span class="tag" style="cursor:pointer;padding:6px 14px;font-size:0.85rem;background:#f0f2f5;color:#666;">碳中和</span>
-        <span class="tag" style="cursor:pointer;padding:6px 14px;font-size:0.85rem;background:#f0f2f5;color:#666;">ESG报告</span>
-        <span class="tag" style="cursor:pointer;padding:6px 14px;font-size:0.85rem;background:#f0f2f5;color:#666;">绿色建筑</span>
-        <span class="tag" style="cursor:pointer;padding:6px 14px;font-size:0.85rem;background:#f0f2f5;color:#666;">水泥脱碳</span>
+      <!-- Filter tabs - 动态渲染 -->
+      <div id="filterBar" style="display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap;">
       </div>
 
-      <div class="card-grid card-grid-2">
-        <article class="article-card">
-          <div class="card-image" style="background:linear-gradient(135deg,#FFF3E0,#FFE0B2);"><span class="tag-overlay"><span class="tag tag-construction">建筑建材</span></span>🏗️</div>
-          <div class="card-body">
-            <span class="card-category">建筑建材行业</span>
-            <h3 class="card-title"><a href="article.html?id=cscec-esg-2025">中国建筑发布2025年度ESG报告：构建"366"ESG体系</a></h3>
-            <p class="card-excerpt">首次引入双重重要性评估框架，系统回应利益相关方关切。建立"董事会战略与投资委员会—ESG领导小组—专项工作组"三级治理架构。</p>
-            <div class="card-meta"><span>2026-06-03</span><div class="card-tags"><span class="tag tag-esg">ESG报告</span></div></div>
-            <a href="https://www.cscec.com/zgjz_new/tzzgxnew/ESGbg/" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> 阅读原文</a>
-          </div>
-        </article>
+      <div class="card-grid card-grid-2" id="articleGrid">
+      </div>
 
-        <article class="article-card">
-          <div class="card-image" style="background:linear-gradient(135deg,#FFCCBC,#FFAB91);"><span class="tag-overlay"><span class="tag tag-construction">建筑建材</span></span>🏭</div>
-          <div class="card-body">
-            <span class="card-category">建筑建材行业</span>
-            <h3 class="card-title"><a href="article.html?id=cnbm-esg-2025">中国建材2025年ESG报告：首次引入气候情景分析与财务影响量化</a></h3>
-            <p class="card-excerpt">遵循香港联交所ESG报告守则、国资委央企ESG专项报告参考指标体系及TCFD、TNFD框架，获安永有限保证鉴证。</p>
-            <div class="card-meta"><span>2026-06-04</span><div class="card-tags"><span class="tag tag-esg">碳中和</span><span class="tag tag-esg">TCFD</span></div></div>
-            <a href="https://q.stock.sohu.com/cn/news.html?textId=1020059257&type=120&tab=200&code=cn_000877&date=2026/0605" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> 阅读原文</a>
-          </div>
-        </article>
-
-        <article class="article-card">
-          <div class="card-image" style="background:linear-gradient(135deg,#FBE9E7,#FFCCBC);"><span class="tag-overlay"><span class="tag tag-construction">建筑建材</span></span>🧱</div>
-          <div class="card-body">
-            <span class="card-category">建筑建材行业</span>
-            <h3 class="card-title"><a href="article.html?id=cement-esg-carbon">水泥行业ESG锻造低碳建材新根基：碳达峰极限挑战</a></h3>
-            <p class="card-excerpt">责任链条贯穿从矿山开采、熟料煅烧、粉磨包装到废弃物协同处置的全生命周期，要求企业在每一个环节交出负责任的答卷。</p>
-            <div class="card-meta"><span>2026-04-26</span><div class="card-tags"><span class="tag tag-esg">水泥脱碳</span></div></div>
-            <a href="https://baijiahao.baidu.com/s?id=1863542884089060089&wfr=spider&for=pc" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> 阅读原文</a>
-          </div>
-        </article>
-
-        <article class="article-card">
-          <div class="card-image" style="background:linear-gradient(135deg,#EFEBE9,#D7CCC8);"><span class="tag-overlay"><span class="tag tag-construction">建筑建材</span></span>🏢</div>
-          <div class="card-body">
-            <span class="card-category">建筑建材行业</span>
-            <h3 class="card-title"><a href="article.html?id=cai-msci-a">中国建筑国际MSCI ESG评级升至A级，为行业唯一</a></h3>
-            <p class="card-excerpt">增设"应对气候变化"专业委员会，碳中和及碳资产开发提升至董事会主席与行政总裁共同领导层级。恒生可持续发展评级A+级。</p>
-            <div class="card-meta"><span>2026-06-03</span><div class="card-tags"><span class="tag tag-esg">ESG评级</span></div></div>
-            <a href="https://baijiahao.baidu.com/s?id=1866935479192387949&wfr=spider&for=pc" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> 阅读原文</a>
-          </div>
-        </article>
-
-        <article class="article-card">
-          <div class="card-image" style="background:linear-gradient(135deg,#FFF8E1,#FFECB3);"><span class="tag-overlay"><span class="tag tag-construction">建筑建材</span></span>🏘️</div>
-          <div class="card-body">
-            <span class="card-category">建筑建材行业</span>
-            <h3 class="card-title"><a href="article.html?id=building-top10-esg">2025年度"建筑中国十大践行ESG社会责任品牌企业"发布</a></h3>
-            <p class="card-excerpt">行业从"规模扩张"的历史阶段，坚定迈向"价值创造"与"负责任经营"的可持续发展新纪元。</p>
-            <div class="card-meta"><span>2026-01-25</span><div class="card-tags"><span class="tag tag-esg">社会责任</span></div></div>
-            <a href="https://www.sohu.com/a/979815037_187481" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> 阅读原文</a>
-          </div>
-        </article>
-
-        <article class="article-card">
-          <div class="card-image" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9);"><span class="tag-overlay"><span class="tag tag-construction">建筑建材</span></span>🌿</div>
-          <div class="card-body">
-            <span class="card-category">建筑建材行业</span>
-            <h3 class="card-title"><a href="article.html?id=cbmf-esg-forum">深化建材行业ESG实践：首届建筑材料行业ESG可持续发展论坛</a></h3>
-            <p class="card-excerpt">中国建筑材料联合会主办，绿色低碳建材分会承办，国建联信认证中心支持。探讨建材行业ESG标准与最佳实践。</p>
-            <div class="card-meta"><span>2025-06-20</span><div class="card-tags"><span class="tag tag-esg">绿色建筑</span></div></div>
-            <a href="https://www.cbmf.org/en/" target="_blank" rel="noopener noreferrer" class="card-source-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> 阅读原文</a>
-          </div>
-        </article>
+      <!-- Pagination - 动态渲染 -->
+      <div id="pagination" style="text-align:center;margin-top:40px;">
       </div>
     </div>
   </section>
