@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.esg-weekly.com/sitemap.xml
+Sitemap: https://esg-info.195486937.workers.dev/sitemap.xml
